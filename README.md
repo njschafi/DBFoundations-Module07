@@ -1,7 +1,7 @@
 ###### Name: NSchafi
 ###### Date: 8/23/2022
 ###### Course: IT FDN 130 A Su 22: Foundations of Databases & SQL 
-###### GitHub URL: https://github.com/njschafi/DBFoundations-Module07
+###### GitHub URL: https://github.com/njschafi/DBFoundations-Module7
 
 
 # Assignment 7 – Functions
