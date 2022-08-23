@@ -22,15 +22,15 @@ go
 Example 1 - Syntax of a Scalar UDF
 In Example 1, a function is created to multiply 2 values. You can see at the bottom, that the function (MultiplyValues) is called using (4, 5). The result, or the return of the function, will be a table showing a single value of 20.
 ## Scalar, Inline and Multi-Statement Functions
-A Scalar function in SQL, is a function that takes one or more parameters and returns a single value. Example 1 in the prior section, showcases this by multiply 2 numbers/parameters and outputting a single value.
+A **Scalar** function in SQL, is a function that takes one or more parameters and returns a single value. Example 1 in the prior section, showcases this by multiply 2 numbers/parameters and outputting a single value.
 
-Unlike a Scalar function, an Inline function returns a result-set rather than a single value. A user can pass in parameters into an Inline function and get a result table in return.  The syntax for writing an inline function is shown in Figure 1:
+Unlike a Scalar function, an **Inline** function returns a result-set rather than a single value. A user can pass in parameters into an Inline function and get a result table in return.  The syntax for writing an inline function is shown in Figure 1:
 
  
 Figure 1 - Syntax for an Inline Function
 As you can see above, an Inline function takes in parameters, the parameters are manipulated in some way by a statement and a table is returned.
 
-Lastly, a multi-statement table-valued function (MSTVF) expands on the idea of an inline statement by allowing a function to contain (as the name suggests) multiple-statements within it. It returns a result-set table like an inline function, but only after some additional processing. Figure 2 below shows the syntax of a MSTVF:
+Lastly, a **Multi-Statement** Table-Valued Function (MSTVF) expands on the idea of an inline statement by allowing a function to contain (as the name suggests) multiple-statements within it. It returns a result-set table like an inline function, but only after some additional processing. Figure 2 below shows the syntax of a MSTVF:
  
 Figure 2 - Syntax of a Multi-Statement Function
 Analyzing the mock code in Figure 2, you can see additional statements added when compared to Figure 1. Also, the additional statements/processing start and end with a BEGIN/END block.
