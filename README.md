@@ -22,7 +22,7 @@ go
 Select Tempdb.dbo.MultiplyValues(4, 5);
 go
 '''
-Example 1 - Syntax of a Scalar UDF
+*Example 1 - Syntax of a Scalar UDF*
 
 In Example 1, a function is created to multiply 2 values. You can see at the bottom, that the function (MultiplyValues) is called using (4, 5). The result, or the return of the function, will be a table showing a single value of 20.
 ## Scalar, Inline and Multi-Statement Functions
@@ -32,46 +32,16 @@ Unlike a Scalar function, an **Inline** function returns a result-set rather tha
 
 ![image1](https://user-images.githubusercontent.com/44240955/186482468-8b6306ad-345b-4c70-97a8-76d5d6bc5c00.png)
 
-'''
-CREATE FUNCTION fnNameOfFunction(
--- parameters go here
-@param1 datatype,
-@param2 datatype, ...
-)
-RETURNS TABLE
-AS
-RETURN
--- select statement is only one allowed here
-SELECT ...
-'''
-Figure 1 - Syntax for an Inline Function
+*Figure 1 - Syntax for an Inline Function*
+
 As you can see above, an Inline function takes in parameters, the parameters are manipulated in some way by a statement and a table is returned.
 
 Lastly, a **Multi-Statement** Table-Valued Function (MSTVF) expands on the idea of an inline statement by allowing a function to contain (as the name suggests) multiple-statements within it. It returns a result-set table like an inline function, but only after some additional processing. Figure 2 below shows the syntax of a MSTVF:
 
 ![image2](https://user-images.githubusercontent.com/44240955/186482523-3a1c8e28-3faa-442c-8799-b6e0ccb4b194.png)
 
-'''
-CREATE FUNCTION fnName(
--- can have 0, 1, 2 or more parameters
-@param1 datatype,
-@param2 datatype, ...
-)
--- define table to return
-RETURNS @TableName TABLE (
-Column1 datatype,
-Column2 datatype,
-...
-Columnn datatype,
-)
-AS
-BEGIN
--- typically insert rows into this table
--- eventually, return the results
-RETURN
-END
-'''
-Figure 2 - Syntax of a Multi-Statement Function
+*Figure 2 - Syntax of a Multi-Statement Function*
+
 Analyzing the mock code in Figure 2, you can see additional statements added when compared to Figure 1. Also, the additional statements/processing start and end with a BEGIN/END block.
 ## Summary
 In conclusion, Module 7 introduces the idea of User-Defined Functions as functions that a user can create to process data in a specific way. They come in 3 flavors: Scalar, Inline and Multi-Statement. A Scalar function returns a single value, whereas Inline and Multi-Statement functions return tables. Inline and Multi-Statement functions are similar but differ in that an Inline function as a single statement, compared to a Multi-Statement function (which has many). All-in-all, UDF’s provide the user with a powerful tool to manipulate and process database data.
