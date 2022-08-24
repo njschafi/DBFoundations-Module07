@@ -10,7 +10,7 @@ In this document, we will be going over the use and concepts of functions within
 ## SQL User-Defined Function (UDF)
 As discussed briefly in the introduction, a User-Defined Function is basically a custom function created by a user. There are two basic types of functions; functions that return a table of values and functions that return a single value. A UDF is useful when a user wants to manipulate data in a specific way but SQL does not have an already pre-defined function to do that.  Example 1 below, shows the syntax of a UDF:
 
-'''
+```SQL
 Create Function dbo.MultiplyValues(@Value1 Float, @Value2 Float)
  Returns Float 
  As
@@ -21,7 +21,7 @@ go
 -- Calling the function
 Select Tempdb.dbo.MultiplyValues(4, 5);
 go
-'''
+```
 *Example 1 - Syntax of a Scalar UDF*
 
 In Example 1, a function is created to multiply 2 values. You can see at the bottom, that the function (MultiplyValues) is called using (4, 5). The result, or the return of the function, will be a table showing a single value of 20.
