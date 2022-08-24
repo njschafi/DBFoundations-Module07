@@ -29,6 +29,9 @@ In Example 1, a function is created to multiply 2 values. You can see at the bot
 A **Scalar** function in SQL, is a function that takes one or more parameters and returns a single value. Example 1 in the prior section, showcases this by multiply 2 numbers/parameters and outputting a single value.
 
 Unlike a Scalar function, an **Inline** function returns a result-set rather than a single value. A user can pass in parameters into an Inline function and get a result table in return.  The syntax for writing an inline function is shown in Figure 1:
+
+![image1](https://user-images.githubusercontent.com/44240955/186482468-8b6306ad-345b-4c70-97a8-76d5d6bc5c00.png)
+
 '''
 CREATE FUNCTION fnNameOfFunction(
 -- parameters go here
@@ -45,6 +48,8 @@ Figure 1 - Syntax for an Inline Function
 As you can see above, an Inline function takes in parameters, the parameters are manipulated in some way by a statement and a table is returned.
 
 Lastly, a **Multi-Statement** Table-Valued Function (MSTVF) expands on the idea of an inline statement by allowing a function to contain (as the name suggests) multiple-statements within it. It returns a result-set table like an inline function, but only after some additional processing. Figure 2 below shows the syntax of a MSTVF:
+
+![image2](https://user-images.githubusercontent.com/44240955/186482523-3a1c8e28-3faa-442c-8799-b6e0ccb4b194.png)
 
 '''
 CREATE FUNCTION fnName(
